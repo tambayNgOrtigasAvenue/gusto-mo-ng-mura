@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  --ink: #091413;
+  --forest: #285a48;
+  --jade: #408a71;
+  --mint: #b0e4cc;
+  --background: var(--ink);
+  --foreground: var(--mint);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: #091413;
+  --color-forest: #285a48;
+  --color-jade: #408a71;
+  --color-mint: #b0e4cc;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-enter {
+    animation: none !important;
+  }
+
+  .nav-link-transition {
+    transition: none !important;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition-enter {
+  animation: page-enter 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Leaflet popups: match app chrome */
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--forest) 55%, transparent);
+  background: color-mix(in srgb, var(--forest) 35%, var(--ink));
+  color: var(--mint);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 35%);
+}
+
+.leaflet-popup-tip {
+  background: color-mix(in srgb, var(--forest) 35%, var(--ink));
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+}
+
+.leaflet-popup-content a {
+  color: var(--mint);
+}

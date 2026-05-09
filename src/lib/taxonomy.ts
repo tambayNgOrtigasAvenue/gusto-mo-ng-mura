@@ -1,0 +1,21 @@
+export const BAHAY_KUBO_VEGETABLES = [
+  "Singkamas",
+  "Talong",
+  "Sigarilyas",
+  "Mani",
+  "Sitaw",
+  "Bataw",
+  "Patani",
+  "Kundol",
+  "Patola",
+  "Upo",
+  "Kalabasa",
+  "Labanos",
+  "Mustasa",
+  "Sibuyas",
+  "Kamatis",
+  "Bawang",
+  "Luya",
+  "Linga",
+] as const;
+

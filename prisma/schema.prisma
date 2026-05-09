@@ -1,0 +1,139 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum SourceType {
+  GOV
+  NEWS
+  COMMUNITY
+}
+
+enum Unit {
+  KG
+  PC
+}
+
+model Market {
+  id               String   @id @default(cuid())
+  canonicalKey     String   @unique
+  name             String
+  cityMunicipality String
+  address          String?
+  lat              Float
+  lng              Float
+  metadata         Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  priceObservations PriceObservation[]
+
+  @@index([cityMunicipality])
+}
+
+model ProductCategory {
+  id          String  @id @default(cuid())
+  canonicalKey String @unique
+  tagalogName String
+  englishName String?
+  sortOrder   Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  products Product[]
+
+  @@unique([tagalogName])
+  @@index([sortOrder])
+}
+
+model Product {
+  id           String  @id @default(cuid())
+  categoryId   String
+  tagalogName  String
+  canonicalKey String
+  typicalUnit  Unit
+  imageUrl     String?
+  attributes   Json?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  category          ProductCategory  @relation(fields: [categoryId], references: [id])
+  priceObservations PriceObservation[]
+  monthlyAggregates MonthlyAggregate[]
+
+  @@unique([canonicalKey])
+  @@index([categoryId])
+  @@index([tagalogName])
+}
+
+model Source {
+  id           String     @id @default(cuid())
+  canonicalKey  String     @unique
+  name         String
+  type         SourceType
+  publishedAt  DateTime?
+  url          String?
+  citationText String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  priceObservations PriceObservation[]
+
+  @@index([type])
+  @@index([publishedAt])
+}
+
+model PriceObservation {
+  id           String   @id @default(cuid())
+  marketId     String?
+  productId    String
+  sourceId     String
+  variantLabel String?
+  priceValue   Decimal  @db.Decimal(10, 2)
+  unit         Unit
+  observedAt   DateTime
+  confidence   Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  market  Market?  @relation(fields: [marketId], references: [id])
+  product Product  @relation(fields: [productId], references: [id])
+  source  Source   @relation(fields: [sourceId], references: [id])
+
+  @@index([productId, observedAt])
+  @@index([marketId, observedAt])
+  @@index([sourceId])
+}
+
+model MonthlyAggregate {
+  id               String   @id @default(cuid())
+  productId        String
+  areaType         String
+  areaKey          String
+  monthStart       DateTime
+  minPrice         Decimal  @db.Decimal(10, 2)
+  maxPrice         Decimal  @db.Decimal(10, 2)
+  observationCount Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  product Product @relation(fields: [productId], references: [id])
+
+  @@unique([productId, areaType, areaKey, monthStart])
+  @@index([areaType, areaKey, monthStart])
+}

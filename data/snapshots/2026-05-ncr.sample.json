@@ -1,0 +1,226 @@
+{
+  "snapshot": {
+    "area": "NCR",
+    "observedAt": "2026-05-01T00:00:00.000Z",
+    "notes": "Sample curated snapshot for development only. Replace with real, citeable entries."
+  },
+  "sources": [
+    {
+      "key": "da-bantay-presyo-2026-05",
+      "name": "Department of Agriculture",
+      "type": "GOV",
+      "publishedAt": "2026-05-01T00:00:00.000Z",
+      "url": "https://www.da.gov.ph/",
+      "citationText": "Department of Agriculture (Philippines). Price monitoring / bulletin. (Sample URL for development — replace with exact bulletin link.)"
+    },
+    {
+      "key": "news-price-watch-2026-05",
+      "name": "News Agency (Sample)",
+      "type": "NEWS",
+      "publishedAt": "2026-05-02T00:00:00.000Z",
+      "url": "https://example.com/price-watch",
+      "citationText": "Sample news citation. Replace with a real news link and proper citation text."
+    }
+  ],
+  "markets": [
+    {
+      "key": "quiapo-market-manila",
+      "name": "Quiapo Market",
+      "cityMunicipality": "Manila",
+      "address": "Quiapo, Manila, Metro Manila",
+      "lat": 14.5982,
+      "lng": 120.9847
+    },
+    {
+      "key": "divisoria-market-manila",
+      "name": "Divisoria Market",
+      "cityMunicipality": "Manila",
+      "address": "Divisoria, Manila, Metro Manila",
+      "lat": 14.6008,
+      "lng": 120.9732
+    },
+    {
+      "key": "balintawak-market-quezon-city",
+      "name": "Balintawak Market",
+      "cityMunicipality": "Quezon City",
+      "address": "Balintawak, Quezon City, Metro Manila",
+      "lat": 14.6579,
+      "lng": 120.9991
+    },
+    {
+      "key": "kamuning-market-quezon-city",
+      "name": "Kamuning Market",
+      "cityMunicipality": "Quezon City",
+      "address": "Kamuning, Quezon City, Metro Manila",
+      "lat": 14.6292,
+      "lng": 121.0332
+    },
+    {
+      "key": "pateros-market-pateros",
+      "name": "Pateros Public Market",
+      "cityMunicipality": "Pateros",
+      "address": "Pateros, Metro Manila",
+      "lat": 14.5445,
+      "lng": 121.0671
+    }
+  ],
+  "categories": [
+    { "key": "bigas", "tagalogName": "Bigas", "englishName": "Rice", "sortOrder": 1 },
+    { "key": "gulay", "tagalogName": "Gulay", "englishName": "Vegetables", "sortOrder": 2 },
+    { "key": "isda", "tagalogName": "Isda", "englishName": "Fish", "sortOrder": 3 },
+    { "key": "karne", "tagalogName": "Karne", "englishName": "Meat", "sortOrder": 4 },
+    { "key": "itlog", "tagalogName": "Itlog", "englishName": "Egg", "sortOrder": 5 },
+    { "key": "asukal", "tagalogName": "Asukal", "englishName": "Sugar", "sortOrder": 6 },
+    { "key": "pampalasa", "tagalogName": "Pampalasa", "englishName": "Spices", "sortOrder": 7 }
+  ],
+  "products": [
+    {
+      "key": "bigas-regular-milled",
+      "categoryKey": "bigas",
+      "tagalogName": "Bigas (Regular milled)",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Rice_grains_%28IRRI%29.jpg",
+      "attributes": { "riceType": "regular_milled" }
+    },
+    {
+      "key": "bigas-well-milled",
+      "categoryKey": "bigas",
+      "tagalogName": "Bigas (Well milled)",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Rice_grains_%28IRRI%29.jpg",
+      "attributes": { "riceType": "well_milled" }
+    },
+    {
+      "key": "asukal-refined",
+      "categoryKey": "asukal",
+      "tagalogName": "Asukal (Puti / Refined)",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Sugarcubes.jpg",
+      "attributes": { "sugarType": "refined" }
+    },
+    {
+      "key": "karne-baboy-liempo",
+      "categoryKey": "karne",
+      "tagalogName": "Karne (Baboy - Liempo)",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pork_belly_slices.jpg",
+      "attributes": { "meatType": "pork", "cut": "liempo" }
+    },
+    {
+      "key": "karne-manok-buong",
+      "categoryKey": "karne",
+      "tagalogName": "Karne (Manok - Buo)",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Whole_raw_chicken.jpg",
+      "attributes": { "meatType": "chicken", "cut": "whole" }
+    },
+    {
+      "key": "gulay-sitaw",
+      "categoryKey": "gulay",
+      "tagalogName": "Sitaw",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Vigna_unguiculata_subsp._sesquipedalis_%28yardlong_bean%29.jpg",
+      "attributes": { "bahayKubo": true }
+    },
+    {
+      "key": "gulay-talbos-ng-kamote",
+      "categoryKey": "gulay",
+      "tagalogName": "Talbos ng kamote",
+      "typicalUnit": "KG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Ipomoea_batatas_leaves.jpg",
+      "attributes": { "bahayKubo": true }
+    },
+    {
+      "key": "itlog-manok-medium",
+      "categoryKey": "itlog",
+      "tagalogName": "Itlog ng manok (Medium)",
+      "typicalUnit": "PC",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Chicken_eggs.jpg",
+      "attributes": { "eggType": "chicken", "size": "medium" }
+    }
+  ],
+  "observations": [
+    {
+      "marketKey": "quiapo-market-manila",
+      "productKey": "bigas-regular-milled",
+      "variantLabel": null,
+      "priceValue": 52.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "divisoria-market-manila",
+      "productKey": "bigas-regular-milled",
+      "variantLabel": null,
+      "priceValue": 50.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "balintawak-market-quezon-city",
+      "productKey": "bigas-well-milled",
+      "variantLabel": null,
+      "priceValue": 57.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "kamuning-market-quezon-city",
+      "productKey": "asukal-refined",
+      "variantLabel": null,
+      "priceValue": 78.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "news-price-watch-2026-05"
+    },
+    {
+      "marketKey": "quiapo-market-manila",
+      "productKey": "karne-baboy-liempo",
+      "variantLabel": null,
+      "priceValue": 340.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "news-price-watch-2026-05"
+    },
+    {
+      "marketKey": "pateros-market-pateros",
+      "productKey": "karne-manok-buong",
+      "variantLabel": null,
+      "priceValue": 190.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "balintawak-market-quezon-city",
+      "productKey": "itlog-manok-medium",
+      "variantLabel": null,
+      "priceValue": 9.0,
+      "unit": "PC",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "divisoria-market-manila",
+      "productKey": "gulay-sitaw",
+      "variantLabel": null,
+      "priceValue": 110.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    },
+    {
+      "marketKey": "quiapo-market-manila",
+      "productKey": "gulay-talbos-ng-kamote",
+      "variantLabel": null,
+      "priceValue": 85.0,
+      "unit": "KG",
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "sourceKey": "da-bantay-presyo-2026-05"
+    }
+  ]
+}
+
