@@ -21,10 +21,11 @@ export function MarketMapClient(props: { markets: MarketDto[]; initialCity?: str
 
   useEffect(() => {
     void import("leaflet").then((L) => {
+      // Served from public/leaflet (copied from leaflet/dist/images) — avoids fragile CDN GETs.
       L.Icon.Default.mergeOptions({
-        iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-        iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-        shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+        iconUrl: "/leaflet/marker-icon.png",
+        iconRetinaUrl: "/leaflet/marker-icon-2x.png",
+        shadowUrl: "/leaflet/marker-shadow.png",
       });
     });
 
