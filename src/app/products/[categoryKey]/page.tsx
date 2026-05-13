@@ -67,7 +67,7 @@ export default async function CategoryPage(props: { params: Promise<{ categoryKe
                       / {p.typicalUnit === "KG" ? "kg" : "pc"}
                     </p>
                   ) : (
-                    <p className="text-sm text-mint/65">Walang monthly range data pa.</p>
+                    <p className="text-sm text-mint/65">No monthly range data yet.</p>
                   )}
                 </div>
 

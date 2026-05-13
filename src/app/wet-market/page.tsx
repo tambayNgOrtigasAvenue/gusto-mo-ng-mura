@@ -9,7 +9,7 @@ export default async function WetMarketIndexPage() {
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight text-mint">Wet Market</h1>
         <p className="text-sm text-mint/70">
-          Pumili muna ng palengke sa mapa, tapos tingnan ang presyo ng mga bilihin.
+          Choose a market from the map and see the prices of the items.
         </p>
       </div>
 

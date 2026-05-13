@@ -10,7 +10,7 @@ export default async function InsightsPage() {
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight text-mint">Insights</h1>
         <p className="text-sm text-mint/70">
-          Mga balita at update tungkol sa presyo (may sources at citations).
+          Price updates from news sources and government bulletins (sources and citations).
         </p>
       </div>
 
@@ -35,7 +35,7 @@ export default async function InsightsPage() {
                   rel="noopener noreferrer"
                   className="inline-flex rounded-full bg-jade/15 px-4 py-2 text-sm font-semibold text-mint transition-all duration-300 hover:bg-jade/25 active:scale-[0.98]"
                 >
-                  Buksan source
+                  Open source link
                 </Link>
               ) : null}
             </div>

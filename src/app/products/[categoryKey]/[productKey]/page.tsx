@@ -68,7 +68,7 @@ export default async function ProductPage(props: {
 
       <section className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="rounded-2xl border border-forest/45 bg-forest/25 p-5 backdrop-blur-sm">
-          <h2 className="text-lg font-semibold tracking-tight text-mint">Pinakamurang sample prices</h2>
+          <h2 className="text-lg font-semibold tracking-tight text-mint">Cheapest sample prices</h2>
           <p className="mt-1 text-sm text-mint/70">Sorted by lowest price (latest snapshot month).</p>
 
           <div className="mt-4 flex flex-col gap-3">
@@ -105,7 +105,7 @@ export default async function ProductPage(props: {
                         href={`/wet-market/${encodeURIComponent(o.marketKey)}`}
                         className="inline-flex w-fit rounded-full bg-jade/15 px-3 py-1.5 text-xs font-semibold text-mint transition-all duration-300 hover:bg-jade/25"
                       >
-                        Buksan ang palengke
+                        Open to see wet market page
                       </Link>
                     </div>
 
@@ -114,7 +114,7 @@ export default async function ProductPage(props: {
                 );
               })}
             {observations.length === 0 ? (
-              <p className="text-sm text-mint/70">Wala pang observations para dito.</p>
+              <p className="text-sm text-mint/70">No observations yet.</p>
             ) : null}
           </div>
         </div>

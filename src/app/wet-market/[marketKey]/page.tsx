@@ -41,7 +41,7 @@ export default async function MarketDetailPage(props: { params: Promise<{ market
         <div className="rounded-2xl border border-forest/45 bg-forest/25 p-5 backdrop-blur-sm lg:col-span-2">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h2 className="text-lg font-semibold tracking-tight text-mint">Presyo ng mga bilihin</h2>
+              <h2 className="text-lg font-semibold tracking-tight text-mint">Prices</h2>
               <p className="mt-1 text-sm text-mint/70">
                 Grouped by category. Each item includes a source citation.
               </p>
@@ -50,7 +50,7 @@ export default async function MarketDetailPage(props: { params: Promise<{ market
               href="/dashboard"
               className="hidden rounded-full bg-jade/15 px-4 py-2 text-sm font-semibold text-mint transition-all duration-300 hover:bg-jade/25 sm:inline"
             >
-              Balik mapa
+              Go back to map
             </Link>
           </div>
 
@@ -109,7 +109,7 @@ export default async function MarketDetailPage(props: { params: Promise<{ market
 
             {observations.length === 0 ? (
               <p className="text-sm text-mint/70">
-                Wala pang observations para sa palengkeng ito. (Sa sample data, may ilan na naka-populate.)
+                No observations yet.
               </p>
             ) : null}
           </div>

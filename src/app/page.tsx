@@ -18,9 +18,8 @@ export default async function Home() {
               Gusto mo ng mura?
             </h1>
             <p className="mt-4 text-lg leading-8 text-mint/85">
-              Alamin ang presyong <span className="font-semibold text-mint">pinakamababa</span>{" "}
-              at ihambing ang mga palengke para sa bigas, asukal, karne, gulay,
-              at iba pa.
+              See the prices <span className="font-semibold text-mint">lowest</span>{" "}
+              items at compare the prices of the markets for rice, sugar, meat, vegetables, and other products.
             </p>
           </div>
 
@@ -35,7 +34,7 @@ export default async function Home() {
               href="/products"
               className="inline-flex items-center justify-center rounded-full border border-jade/50 bg-forest/20 px-5 py-3 text-sm font-semibold text-mint backdrop-blur-sm transition-all duration-300 ease-out hover:border-jade/70 hover:bg-forest/35 active:scale-[0.98]"
             >
-              Tingnan lahat ng products
+              See all products
             </Link>
           </div>
         </div>
@@ -56,14 +55,14 @@ export default async function Home() {
             href="/wet-market/quiapo-market-manila"
             className="hidden rounded-full bg-jade/10 px-4 py-2 text-sm font-semibold text-mint transition-all duration-300 hover:bg-jade/20 sm:inline"
           >
-            Ihambing ang palengke
+            Compare wet markets
           </Link>
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <PricePreviewCard
             title="Bigas"
-            subtitle="Mga uri + ₱/kg"
+            subtitle="Types + ₱/kg"
             unitLabel="kg"
             href="/products/bigas"
             range={previewByKey.get("bigas-regular-milled")?.range ?? null}

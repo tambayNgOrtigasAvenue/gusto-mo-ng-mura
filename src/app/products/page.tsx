@@ -9,8 +9,8 @@ export default async function ProductsIndexPage() {
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-semibold tracking-tight text-mint">Products</h1>
         <p className="text-sm text-mint/70">
-          Lahat ng categories: Bigas, Gulay (Bahay Kubo), Isda, Karne, Itlog,
-          Asukal, Pampalasa.
+          All Categories: Rice, Vegetables, Fish, Meat, Egg,
+          Sugar, Condiments.
         </p>
       </div>
 
@@ -24,7 +24,7 @@ export default async function ProductsIndexPage() {
             <h2 className="text-lg font-semibold tracking-tight text-mint">{c.tagalogName}</h2>
             <p className="mt-1 text-sm text-mint/65">{c.englishName ?? "Category"}</p>
             <p className="mt-4 text-sm font-semibold text-jade transition-colors group-hover:text-mint">
-              Tingnan items →
+              See items →
             </p>
           </Link>
         ))}
